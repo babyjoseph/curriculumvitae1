@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -6,9 +7,6 @@
 }
 
 .column1 {
-  float: left;
-  width: 20vw;
-  margin: 0 25px 25px 100px;
   background-color: #ffffff;
   height: 100%;
   -webkit-box-shadow: 0 0 15px 0 #222;
@@ -23,10 +21,6 @@
   width: 100%;
 }
 
-.column2 {
-  margin: 25px 25px 25px 28vw;
-}
-
 .column2 .box {
   margin-bottom: 25px;
   padding: 5px 25px;
@@ -36,9 +30,45 @@
 }
 
 .main {
+  padding: 5% 10%;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 10px;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: 'c1 c1 c2 c2 c2' 'c1 c1 c2 c2 c2';
+}
+
+.column1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: c1;
+}
+
+.column2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: c2;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    grid-row-gap: 10px;
+        grid-template-areas: 'c1 c1 c1 c1 c1' 'c2 c2 c2 c2 c2';
+  }
+}
+
+.main {
   background-color: aliceblue;
   min-height: 100%;
   line-height: 2;
+  font-family: "Poppins", sans-serif;
 }
 
 .main h1 {

@@ -1,11 +1,14 @@
 @import "config";
 @import "column1";
 @import "column2";
+@import "layout";
+@import "responsive";
 
 .main{
     background-color: aliceblue;
     min-height: 100%;
     line-height: 2;
+    font-family: $userFonts;
     h1{
         color: $primary-color;
     }

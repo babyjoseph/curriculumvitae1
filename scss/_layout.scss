@@ -1,0 +1,17 @@
+.main{
+    padding: 5% 10%;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    'c1 c1 c2 c2 c2'
+    'c1 c1 c2 c2 c2';
+}
+
+.column1{
+    grid-area: c1;
+}
+.column2{
+    grid-area: c2;
+}
